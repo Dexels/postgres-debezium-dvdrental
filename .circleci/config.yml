@@ -12,6 +12,4 @@ jobs:
           TAG=0.1.$CIRCLE_BUILD_NUM
           echo "Building tag: $TAG"
           docker build -t dexels/dvdrental:$TAG -t dexels/dvdrental:latest .
-
-      # deploy the image
-      - run: docker push dexels/dvdrental:$TAG
+          docker push dexels/dvdrental:$TAG -t dexels/dvdrental:latest
